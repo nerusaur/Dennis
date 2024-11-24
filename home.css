@@ -1,0 +1,153 @@
+
+body{
+  font-family: "Georama", sans-serif;
+}
+/* General Header Styling */
+header {
+  position: sticky; /* Stays at the top during scroll */
+  top: 0; /* Position it at the top */
+  z-index: 100; /* Ensure it stays above other content */
+  background-color: #3A1E16; /* Set a background color for better visibility */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow for separation */
+  padding: 10px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Profile Picture Styling */
+.profile-picture {
+  display: flex;
+  align-items: center;
+}
+
+.profile-dog {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+/* Dropdown Styling */
+.dropdown {
+  position: relative;
+  margin-right: 20px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  z-index: 101;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Nested Dropdown Styling */
+.nested-dropdown {
+  position: relative;
+}
+
+.nested-dropdown-content {
+  display: none;
+  position: absolute;
+  left: 100%; /* Push it to the right of the parent menu */
+  top: 0;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+}
+
+.nested-dropdown:hover .nested-dropdown-content {
+  display: block;
+}
+
+/* Search Input Styling */
+input[name="search"] {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 200px;
+}
+
+.container{
+
+
+  background-color: lightblue;
+}
+
+
+
+.login-page{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: lightpink;
+  height: 100vh;
+ 
+}
+.center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+img{
+  height: 80px;
+  border-radius: 40px;
+ 
+}
+
+#home {
+  height: 100vh; /* Full viewport height */
+  background: url('img/image.png'), url('img/image1.png'), url('img/image2.png');
+  background-size: cover; /* Ensures each image covers the container */
+  background-repeat: no-repeat;
+  background-position: 0 0; /* Start with the first image */
+  animation: carousel 12s ease-in-out infinite; /* 12s duration for the full cycle */
+}
+#name{
+  color: white;
+}
+
+/* Section Styling */
+#home1 {
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  align-items: center; /* Centers vertically */
+  height: 100vh; /* Full viewport height */
+  padding: 20px; /* Optional padding for spacing */
+  background-color: #f9f9f9; /* Optional background color */
+  text-align: center; /* Center text inside the section */
+}
+
+/* Centered Content Styling */
+#context {
+  max-width: 800px; /* Limit width for better readability */
+  background-color: #ffffff; /* Optional background color for context */
+  padding: 20px;
+  border-radius: 8px; /* Optional rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+}
+.resized-image {
+  width: 80vh; /* Set desired width */
+  height: auto; /* Maintain aspect ratio */
+  max-width: 100%; /* Ensure it doesn't overflow its container */
+}
+@keyframes carousel {
+  0%, 33.33% {
+    background-position: 0 0; /* First image */
+  }
+  33.34%, 66.66% {
+    background-position: 100vw 0; /* Slide to the second image */
+  }
+  66.67%, 100% {
+    background-position: 200vw 0; /* Slide to the third image */
+  }
+}
